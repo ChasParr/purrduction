@@ -1,0 +1,355 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+#logo {
+    height: 40px;
+    width: 40;
+    padding-top: 5px;
+    float:left;
+    border-radius: 8px;
+}
+
+nav {
+    width: 100%;
+    height: 50px;
+    background-color: rgba(255,255,255,.5);
+    box-shadow: 0px 0px 5px black;
+}
+
+nav:nth-child(1) {
+    padding-left: 25px;
+}
+
+.navlink {
+    padding: 5px;
+    padding-top: 12px;
+    padding-left: 20px;
+    color: white;
+    font-size: 1.3em;
+    float: left;
+}
+
+.navlink a, .navlink a:link, .navlink a:visited, .navlink a:hover, .navlink a:active {
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 4px;
+    background-color: darkgreen;
+}
+
+.navlink a:hover {
+    background-color: green;
+}
+
+.roomForm {
+    width: 40%;
+    min-width: 400px;
+    box-shadow: 0px 0px 5px black;
+    border-radius: 25px;
+    margin: 0 auto;
+    padding: 20px 30px;
+    background-color: rgba(255,255,255,.5);
+    margin-top: 100px;
+}
+
+.roomForm label {
+    display: inline-block;
+    width: 75px;
+    margin-left: 10px;
+    font-size: 1.2em;
+    float: left;
+    color: black;
+}
+
+.roomForm input[type=text] {
+    float:left;
+}
+
+.makeRoomSubmit {
+    display: inline;
+    width: 90px;
+    background-color: darkgreen;
+    border-radius: 2px;
+    color: white;
+    text-decoration: none;
+}
+
+.makeRoomSubmit:link, .makeRoomSubmit:visited, .makeRoomSubmit:hover, .makeRoomSubmit:active {
+    color: white;
+}
+
+.makeRoomSubmit:hover {
+    background-color: green;
+}
+
+.mainForm {
+    height: 250px;
+    width: 370px;
+    font-size: 1.2em;
+    margin: auto; 
+    padding: 30px 30px;
+    margin-top: 200px;
+    background-color: rgba(255,255,255,.5);
+    box-shadow: 0px 0px 5px black;
+    border-radius: 25px;
+}
+
+.mainForm h3 {
+    text-align: center;
+}
+
+.mainForm label {
+    display: inline-block;
+    width: 120px;
+    margin-right: 10px;
+    text-align: right;
+    font-size: 1.2em;
+}
+
+.formSubmit {
+    padding: 5px;
+    color: white;
+    font-size: 1.3em;
+    display: inline-block;
+    text-decoration: none;
+    
+    border: none;
+    background-color: darkgreen;
+}
+
+.formSubmit:link, .formSubmit:visited, .formSubmit:hover, .formSubmit:active {
+    color: white;
+}
+
+.formSubmit:hover {
+    background-color: green;
+}
+
+#user, #pass, #pass2, #oldPass {
+    text-align: center;
+    font-size: 1.1em;
+    width: 180px;
+    border-radius: 6px;
+}
+
+#user:focus, #pass:focus, #pass2:focus, #oldPass:focus {
+    outline: none;
+    box-shadow: 0px 0px 1px 1px #55acee;
+}
+
+#domoMessage {
+    display:none;
+    top: 250px;
+    width: 250px;
+    height: 650px;
+    position: absolute;
+    z-index: 200;
+    right: 0px;
+    overflow: hidden;
+}
+
+#domoMessage h3 {
+    width: 200px;
+    position: absolute;
+    top: 0px;
+    left: 20px;
+}
+
+#speech {
+    height: 120px;
+    width: 250px;
+    z-index:300;
+}
+
+#errorMessage {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: red;
+    font-style: italic;
+}
+
+#domo {
+    z-index: 225;
+    margin-top: -20px;
+    margin-left: 135px;
+    height: 450px;
+    width: 300px;
+    -ms-transform: rotate(330deg);
+    -webkit-transform: rotate(330deg); 
+    transform: rotate(330deg);
+}
+
+#rooms {
+    width: 40%;
+    min-width: 400px;
+    box-shadow: 0px 0px 5px black;
+    border-radius: 25px;
+    margin: 0 auto;
+    padding: 20px 30px;
+    background-color: rgba(255,255,255,.5);
+    margin-top: 100px;
+}
+
+.room {
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    background-color: rgb(255, 249, 220);
+    border: 10px solid transparent;
+    border-image: url("/assets/img/woodBorder.png") 20 round;
+    padding: 10px;
+    min-height:60px;
+    overflow: hidden;
+}
+
+.room:hover {
+    background-color: #66bfff;
+}
+
+img.daisyHead {
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 50px;
+    width: 50px;
+    margin-top:0px;
+    float:left;
+}
+
+h3.emptyRooms {
+    width: 400px;
+    font-size: 1.5em;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 18px;
+}
+
+h3.roomName {
+    float:left;
+    width: 200px;
+    font-weight: bold;
+    padding-left: 65px;
+    font-size: 1.5em;
+}
+
+h3.age {
+    float:right;
+    text-align: left;
+    width: 100px;
+    font-weight: bold;
+    padding-right: 40px;
+    font-size: 1.5em;
+}
+
+.room:first-child {
+    margin-top: 10px;
+}
+
+.room:last-child {
+    margin-bottom:10px;
+}
+
+
+header {
+    width: 1080px;
+    margin: auto;
+    padding: 10px 30px 10px 30px;
+}
+body {
+    width: 100%;
+    height: 100%;
+    background: url("/assets/img/grass.jpg") no-repeat center fixed;
+    background-size: cover;
+}
+
+input[type=button] {
+    padding: 5px;
+    margin: 10px;
+    background-color: darkgreen;
+    border: none;
+    color: white;
+}
+input[type=button]:hover {
+    box-shadow: 0px 0px 5px black;
+}
+
+#gardenContent {
+    width: 1080px;
+    margin: auto; 
+    padding: 20px 30px;
+    background-color: rgba(255,255,255,.5);
+    box-shadow: 0px 0px 5px black;
+    border-radius: 25px;
+
+}
+#canvas {
+    display: inline-block;
+}
+
+#userBox {
+    padding: 10px 15px 1px 15px;
+    height: 500px;
+    width: 300px;
+    float: right;
+    background-color: rgb(255, 249, 220);
+    font-size: 13px;
+    border: 10px solid transparent;
+    border-image: url("/assets/img/woodBorder.png") 20 round;
+}
+
+#userBox h3 {
+    height: 6%;
+}
+        
+#userList {
+    list-style-position: inside;
+    list-style-type: none;
+    box-shadow: 0px 0px 1px grey;
+    height: 20%;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#chatBox {
+    font-size: 13px;
+    list-style-type: none;
+    box-shadow: 0px 0px 1px grey;
+    height: 60%;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+#userSettings{
+    margin-top: 2px;
+    height: 6%;
+    width: 100%;
+}
+#nameField{
+    width: 55%;
+}
+#messageForm{
+    margin-top: 2px;
+    height: 6%;
+    width: 100%;
+}
+#messageField{
+    width: 77%;
+}
+
+.hidden {
+    display: none;
+}
