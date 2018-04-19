@@ -18,13 +18,13 @@ const petCatPage = (req, res) => {
 // get a random cat for petting purposes
 
 const getRandomCat = (req, res) => {
-		Cat.CatModel.findRandom(req.session.account._id, (err, doc) => {
+  Cat.CatModel.findRandom(req.session.account._id, (err, doc) => {
     if (err) {
       console.log(err);
       return res.status(400).json({ error: 'An error occurred' });
     }
 
-  	return res.json({ cat: doc });
+    return res.json({ cat: doc });
   });
 };
 
